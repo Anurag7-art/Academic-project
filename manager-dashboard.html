@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manager Dashboard</title>
+
+    <link rel="stylesheet" href="manager.css">
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="manager-header">
+
+        <div>
+
+            <h1>
+                Manager Dashboard
+            </h1>
+
+            <p>
+                Review and manage employee leave requests
+            </p>
+
+        </div>
+
+
+        <button
+            id="logoutBtn"
+            class="logout-btn"
+        >
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="manager-main">
+
+
+        <!-- STATISTICS -->
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <h3>
+                    Total Requests
+                </h3>
+
+                <h2 id="managerTotal">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Pending
+                </h3>
+
+                <h2 id="managerPending">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Approved
+                </h3>
+
+                <h2 id="managerApproved">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Rejected
+                </h3>
+
+                <h2 id="managerRejected">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- REQUESTS -->
+
+        <section class="manager-table-section">
+
+            <div class="table-title">
+
+                <div>
+
+                    <h2>
+                        Employee Leave Requests
+                    </h2>
+
+                    <p>
+                        Review, approve or reject submitted requests.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="managerTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="manager.js"></script>
+
+</body>
+
+</html>

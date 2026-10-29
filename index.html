@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Leave Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo-section">
+
+            <h1>Employee Leave Management</h1>
+
+            <p>
+                Manage your leave requests easily
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- Dashboard -->
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <h3>Total Requests</h3>
+
+                <h2 id="totalRequests">0</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Pending</h3>
+
+                <h2 id="pendingRequests">0</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Approved</h3>
+
+                <h2 id="approvedRequests">0</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Rejected</h3>
+
+                <h2 id="rejectedRequests">0</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLY LEAVE ================= -->
+
+        <section class="form-section">
+
+            <h2>Apply for Leave</h2>
+
+            <p class="section-description">
+                Submit a new leave request to your manager.
+            </p>
+
+
+            <form id="leaveForm">
+
+                <div class="form-group">
+
+                    <label for="employeeName">
+                        Employee Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="employeeName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="leaveType">
+                        Leave Type
+                    </label>
+
+                    <select id="leaveType" required>
+
+                        <option value="">
+                            Select leave type
+                        </option>
+
+                        <option value="Casual Leave">
+                            Casual Leave
+                        </option>
+
+                        <option value="Sick Leave">
+                            Sick Leave
+                        </option>
+
+                        <option value="Annual Leave">
+                            Annual Leave
+                        </option>
+
+                        <option value="Emergency Leave">
+                            Emergency Leave
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="date-container">
+
+                    <div class="form-group">
+
+                        <label for="startDate">
+                            Start Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="startDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="endDate">
+                            End Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="endDate"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reason">
+                        Reason
+                    </label>
+
+                    <textarea
+                        id="reason"
+                        placeholder="Enter reason for your leave"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Leave Request
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= EMPLOYEE RECORDS ================= -->
+
+        <section class="records-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>My Leave Records</h2>
+
+                    <p>
+                        Track the status of your submitted requests.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="leaveTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div>
+
+            <h3>Employee Leave Management</h3>
+
+            <p>
+                Leave management made simple and efficient.
+            </p>
+
+        </div>
+
+
+        <div class="manager-link">
+
+            <span>
+                Are you a manager?
+            </span>
+
+            <a href="manager-login.html" target="_blank">
+                Manager Portal →
+            </a>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Employee Leave Management System
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js">
+        
+    </script>
+    
+
+</html>
